@@ -1,0 +1,16 @@
+impoty math
+ calculate_mean(arr):
+    return sum(arr) / len(arr)
+ calculate_variance(arr, mean):
+    variance = sum((x - mean) ** 2 for x in arr) / len(arr)
+    return variance
+calculate_standard_deviation(variance):
+    return math.sqrt(variance)
+if __name__ == "__main__":
+    numbers = list(map(float, input("Enter numbers separated by space: ").split()))
+    mean = calculate_mean(numbers)
+    variance = calculate_variance(numbers, mean)
+    deviation = calculate_standard_deviation(variance)
+    print(f"Mean: {mean}")
+    print(f"Variance: {variance}")
+    print(f"Standard Deviation: {deviation}")
